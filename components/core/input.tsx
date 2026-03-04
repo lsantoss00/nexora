@@ -3,7 +3,7 @@
 import Button from "@/components/core/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/utils/cn";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, Search } from "lucide-react";
 import { useRef, useState } from "react";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -41,7 +41,7 @@ const Input = ({
   return (
     <div className="relative w-full">
       {isSearchInput && (
-        <div
+        <Search
           className={cn(
             "absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 transition-colors pointer-events-none",
             isFocused ? "text-primary" : "text-foreground",

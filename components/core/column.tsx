@@ -1,22 +1,15 @@
+import { cn } from "@/utils/cn";
+
 type ColumnProps = React.ComponentProps<"div"> & {
   as?: React.ElementType;
-  ref?: React.Ref<HTMLElement>;
 };
 
 const Column = ({
   as: Component = "div",
   className,
-  children,
-  ref,
   ...props
 }: ColumnProps) => {
-  return (
-    <Component ref={ref} className={`flex flex-col ${className}`} {...props}>
-      {children}
-    </Component>
-  );
+  return <Component className={cn("flex flex-col", className)} {...props} />;
 };
-
-Column.displayName = "Column";
 
 export default Column;
