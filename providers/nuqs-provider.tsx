@@ -4,6 +4,8 @@ interface NuqsProviderProps {
   children: React.ReactNode;
 }
 
-export const NuqsProvider = ({ children }: NuqsProviderProps) => {
+const NuqsProvider = ({ children }: NuqsProviderProps) => {
   return <NuqsAdapter>{children}</NuqsAdapter>;
 };
+
+export default NuqsProvider;

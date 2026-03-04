@@ -1,5 +1,5 @@
 import Toaster from "@/components/core/sonner";
-import { TanstackQueryProvider } from "@/providers/tanstack-query-provider";
+import TanstackQueryProvider from "@/providers/tanstack-query-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
