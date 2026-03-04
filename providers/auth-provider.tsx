@@ -18,7 +18,7 @@ const AuthContext = createContext<AuthContextType>({
   isLoadingAuth: true,
 });
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const supabase = createClient();
 
   const { data: user, isLoading: isLoadingUser } = useQuery<User | null>({
@@ -75,6 +75,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       {children}
     </AuthContext.Provider>
   );
-}
+};
 
 export const useAuth = () => useContext(AuthContext);
+
+export default AuthProvider;
