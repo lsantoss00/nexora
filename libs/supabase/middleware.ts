@@ -1,7 +1,7 @@
 import { createServer } from "@/libs/supabase/server";
 import { NextResponse, type NextRequest } from "next/server";
 
-const PRIVATE_ROUTES = ["/perfil"];
+const PRIVATE_ROUTES = ["/cursos"];
 
 export async function updateSession(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
@@ -40,7 +40,7 @@ export async function updateSession(request: NextRequest) {
   if (pathname === "/") {
     const url = request.nextUrl.clone();
     if (user) {
-      url.pathname = "/usuarios";
+      url.pathname = "/cursos";
     } else {
       url.pathname = "/entrar";
     }
@@ -60,7 +60,7 @@ export async function updateSession(request: NextRequest) {
 
   if (user && pathname === "/entrar") {
     const url = request.nextUrl.clone();
-    url.pathname = "/usuarios";
+    url.pathname = "/cursos";
     url.search = "";
     return NextResponse.redirect(url);
   }
@@ -68,7 +68,7 @@ export async function updateSession(request: NextRequest) {
   if (user && pathname === "/redefinir-senha") {
     if (hasErrorParam) return supabaseResponse;
     const url = request.nextUrl.clone();
-    url.pathname = "/usuarios";
+    url.pathname = "/cursos";
     url.search = "";
     return NextResponse.redirect(url);
   }
