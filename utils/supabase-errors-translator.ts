@@ -1,0 +1,49 @@
+const errorMessagesTranslation: Record<string, string> = {
+  invalid_credentials: "E-mail ou senha inválidos.",
+  email_not_confirmed:
+    "E-mail não confirmado. Verifique sua caixa de entrada ou reenvie a confirmação.",
+  weak_password:
+    "A senha deve conter ao menos um caractere de cada tipo: letras minúsculas, letras maiúsculas, números e símbolos.",
+  over_request_rate_limit:
+    "Muitas solicitações. Tente novamente em alguns instantes.",
+  over_email_send_rate_limit:
+    "Muitos e-mails enviados. Aguarde antes de tentar novamente.",
+  request_timeout: "Tempo de processamento excedido. Tente novamente.",
+  refresh_token_not_found: "Sessão expirada. Faça login novamente.",
+  refresh_token_already_used: "Sessão inválida. Faça login novamente.",
+  bad_jwt: "Sessão inválida. Faça login novamente.",
+  no_authorization: "Você não tem permissão para acessar esta área.",
+  bad_json: "Requisição inválida. Verifique os dados enviados.",
+  email_address_invalid: "Endereço de e-mail inválido.",
+  user_not_found: "Usuário não encontrado.",
+  user_banned: "Usuário banido.",
+  conflict: "Conflito de operação. Aguarde um instante e tente novamente.",
+  "Unable to validate email address: invalid format":
+    "Endereço de e-mail inválido.",
+};
+
+type SupabaseError =
+  | { message?: string; code?: string }
+  | string
+  | null
+  | undefined;
+
+export function supabaseErrorsTranslator(error: SupabaseError): string {
+  if (!error) return "Ocorreu um erro inesperado.";
+
+  let key: string;
+
+  if (typeof error === "string") {
+    key = error;
+  } else {
+    key = error.code || error.message || "";
+  }
+
+  if (errorMessagesTranslation[key]) {
+    return errorMessagesTranslation[key];
+  }
+
+  if (typeof error === "string") return error;
+
+  return error.message || "Ocorreu um erro inesperado.";
+}
