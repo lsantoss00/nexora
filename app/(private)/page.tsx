@@ -18,7 +18,7 @@ export default function PrivatePage() {
   ).length;
 
   return (
-    <Column className="w-full gap-10 px-16 py-8">
+    <Column className="w-full gap-10 px-4 xl:px-8 py-8">
       <WelcomeSection inProgressCount={inProgressCount} />
 
       <CourseSection

@@ -15,7 +15,7 @@ const coursesInProgress = mockCourses.filter(
 
 export default function CoursesInProgressPage() {
   return (
-    <Column className="w-full gap-8 px-16 py-8">
+    <Column className="w-full gap-8 px-4 xl:px-8 py-8">
       <PageHeader
         title="Cursos em Andamento"
         subtitle="Continue seu aprendizado e acompanhe o progresso dos seus cursos em andamento."

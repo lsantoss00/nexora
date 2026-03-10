@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AllCoursesPage() {
   return (
-    <Column className="w-full gap-8 px-16 py-8">
+    <Column className="w-full gap-8 px-4 xl:px-8 py-8">
       <PageHeader
         title="Todos os Cursos"
         subtitle="Explore todos os cursos disponíveis e encontre o que melhor se adapta às suas necessidades."
