@@ -25,7 +25,7 @@ export default function CoursesPage() {
         action={
           <Link
             href="/cursos/todos"
-            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors w-fit"
           >
             Ver todos
           </Link>

@@ -48,6 +48,7 @@ export const mockCourses: CourseType[] = [
     durationInMinutes: 525,
     authorName: "Elena Rossi",
     authorInitial: "E",
+    progress: 98,
     thumbnailGradient: THUMBNAIL_GRADIENT,
   },
   {
@@ -59,6 +60,7 @@ export const mockCourses: CourseType[] = [
     durationInMinutes: 480,
     authorName: "James Park",
     authorInitial: "J",
+    progress: 14,
     thumbnailGradient: THUMBNAIL_GRADIENT,
   },
   {
