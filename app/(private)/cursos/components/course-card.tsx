@@ -24,13 +24,13 @@ const CourseCard = ({ course, className }: CourseCardProps) => {
   return (
     <Column
       className={cn(
-        "overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm",
+        "overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:-translate-y-1",
         className,
       )}
     >
       <div
         className={cn(
-          "aspect-video w-full bg-gradient-to-br",
+          "aspect-video w-full bg-linear-to-br",
           course.thumbnailGradient,
         )}
       />
