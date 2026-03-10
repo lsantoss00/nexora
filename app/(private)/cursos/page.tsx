@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function CoursesPage() {
   return (
-    <Column className="w-full max-w-6xl gap-10 px-6 py-8">
+    <Column className="w-full max-w-7xl gap-10 px-6 py-8">
       <PageHeader />
 
       <CourseSection title="Continue o seu aprendizado">
