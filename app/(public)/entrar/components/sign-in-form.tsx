@@ -46,7 +46,7 @@ const SignInForm = () => {
     mutationFn: signIn,
     onSuccess: (result) => {
       if (result?.success) {
-        router.push("/cursos");
+        router.push("/");
       }
 
       if (result?.error) {

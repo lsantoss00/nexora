@@ -27,7 +27,6 @@ const SignOutButton = () => {
       onClick={() => doSignOut()}
       disabled={pendingDoSignOut}
     >
-      Sair
       <LogOut />
     </Button>
   );

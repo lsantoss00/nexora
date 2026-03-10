@@ -5,8 +5,8 @@ import { Skeleton } from "@/components/core/skeleton";
 import { useAuth } from "@/providers/auth-provider";
 
 interface PageHeaderProps {
-  title: string;
-  subtitle?: string;
+  title: React.ReactNode;
+  subtitle?: React.ReactNode;
 }
 
 const PageHeader = ({ title, subtitle }: PageHeaderProps) => {

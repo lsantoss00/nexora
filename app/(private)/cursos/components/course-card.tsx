@@ -24,7 +24,7 @@ const CourseCard = ({ course, className }: CourseCardProps) => {
   return (
     <Column
       className={cn(
-        "overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:-translate-y-1",
+        "overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm",
         className,
       )}
     >
