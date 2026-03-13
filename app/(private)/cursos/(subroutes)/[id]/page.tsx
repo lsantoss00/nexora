@@ -44,7 +44,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
         </CourseSection>
 
         <CourseSection title="Módulos do curso">
-          <ModuleAccordion modules={modules} />
+          <ModuleAccordion modules={modules} courseId={id} />
         </CourseSection>
       </Column>
     </Column>

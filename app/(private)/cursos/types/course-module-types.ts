@@ -1,6 +1,7 @@
 export type LessonType = {
   id: string;
   title: string;
+  description: string;
   durationInMinutes: number;
   completed: boolean;
 };

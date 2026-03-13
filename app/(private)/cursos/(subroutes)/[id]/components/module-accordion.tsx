@@ -4,12 +4,14 @@ import Column from "@/components/core/column";
 import Row from "@/components/core/row";
 import { cn } from "@/utils/cn";
 import { ChevronDown, Circle, CircleCheck, Clock } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 import type { ModuleType } from "../../../types/course-module-types";
 
 type ModuleAccordionProps = {
   modules: ModuleType[];
+  courseId: string;
 };
 
 const formatDuration = (minutes: number) => {
@@ -19,7 +21,7 @@ const formatDuration = (minutes: number) => {
   return mins > 0 ? `${hours}h ${mins}min` : `${hours}h`;
 };
 
-const ModuleAccordion = ({ modules }: ModuleAccordionProps) => {
+const ModuleAccordion = ({ modules, courseId }: ModuleAccordionProps) => {
   const [expandedIds, setExpandedIds] = useState<Set<string>>(
     () => new Set(modules.length > 0 ? [modules[0].id] : []),
   );
@@ -82,9 +84,10 @@ const ModuleAccordion = ({ modules }: ModuleAccordionProps) => {
             {isExpanded && (
               <Column className="border-t">
                 {module.lessons.map((lesson) => (
-                  <Row
+                  <Link
                     key={lesson.id}
-                    className="items-center gap-3 border-b px-4 py-3 last:border-b-0"
+                    href={`/cursos/${courseId}/aulas/${lesson.id}`}
+                    className="flex items-center gap-3 border-b px-4 py-3 transition-colors last:border-b-0 hover:bg-muted/50"
                   >
                     {lesson.completed ? (
                       <CircleCheck className="size-4 shrink-0 text-primary" />
@@ -103,7 +106,7 @@ const ModuleAccordion = ({ modules }: ModuleAccordionProps) => {
                       <Clock className="size-3" />
                       <span>{lesson.durationInMinutes}min</span>
                     </Row>
-                  </Row>
+                  </Link>
                 ))}
               </Column>
             )}
