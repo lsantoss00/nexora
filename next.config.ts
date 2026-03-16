@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     globalNotFound: true,
   },
   images: {
-    remotePatterns: [{ hostname: "*.supabase.co" }],
+    remotePatterns: [{ hostname: "*.supabase.co" }, { hostname: "images.unsplash.com" }],
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 3600,
     dangerouslyAllowSVG: true,

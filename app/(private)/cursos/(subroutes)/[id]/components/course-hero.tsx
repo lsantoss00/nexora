@@ -1,9 +1,12 @@
+"use client";
+
 import Badge from "@/components/core/badge";
 import Column from "@/components/core/column";
 import Progress from "@/components/core/progress";
 import Row from "@/components/core/row";
-import { cn } from "@/utils/cn";
 import { BookOpen, Clock } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 import type { CourseType } from "../../../data/mock-courses";
 
@@ -19,16 +22,28 @@ const formatDuration = (minutes: number) => {
 };
 
 const CourseHero = ({ course, totalLessons }: CourseHeroProps) => {
+  const [imgError, setImgError] = useState(false);
   const isInProgress = course.progress !== undefined && course.progress > 0;
 
   return (
     <Column className="gap-6">
-      <div
-        className={cn(
-          "h-48 w-full rounded-xl bg-linear-to-br",
-          course.thumbnailGradient,
+      <div className="relative h-64 w-full overflow-hidden rounded-xl">
+        {course.thumbnailUrl && !imgError ? (
+          <>
+            <Image
+              src={course.thumbnailUrl}
+              alt={course.title}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              onError={() => setImgError(true)}
+            />
+            <div className="absolute inset-0 bg-black/50" />
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-zinc-800" />
         )}
-      />
+      </div>
 
       <Column className="gap-4">
         <Row className="flex-wrap items-center gap-3">

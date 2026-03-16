@@ -10,6 +10,7 @@ export type CourseType = {
   authorInitial: string;
   progress?: number;
   thumbnailGradient: string;
+  thumbnailUrl: string;
 };
 
 const THUMBNAIL_GRADIENT = "from-zinc-700 via-zinc-800 to-zinc-900";
@@ -26,6 +27,8 @@ export const mockCourses: CourseType[] = [
     authorInitial: "S",
     progress: 65,
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920&h=1080&fit=crop",
   },
   {
     id: "2",
@@ -38,6 +41,8 @@ export const mockCourses: CourseType[] = [
     authorInitial: "M",
     progress: 30,
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1920&h=1080&fit=crop",
   },
   {
     id: "3",
@@ -50,6 +55,8 @@ export const mockCourses: CourseType[] = [
     authorInitial: "E",
     progress: 98,
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop",
   },
   {
     id: "4",
@@ -62,6 +69,8 @@ export const mockCourses: CourseType[] = [
     authorInitial: "J",
     progress: 14,
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1920&h=1080&fit=crop",
   },
   {
     id: "5",
@@ -73,6 +82,8 @@ export const mockCourses: CourseType[] = [
     authorName: "David Kim",
     authorInitial: "D",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop",
   },
   {
     id: "6",
@@ -84,6 +95,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Ana Costa",
     authorInitial: "A",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1920&h=1080&fit=crop",
   },
   {
     id: "7",
@@ -95,6 +108,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Roberto Nascimento",
     authorInitial: "R",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&h=1080&fit=crop",
   },
   {
     id: "8",
@@ -106,6 +121,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Lisa Tran",
     authorInitial: "L",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1920&h=1080&fit=crop",
   },
   {
     id: "9",
@@ -117,6 +134,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Carlos Mendes",
     authorInitial: "C",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1920&h=1080&fit=crop",
   },
   {
     id: "10",
@@ -128,6 +147,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Sophie Laurent",
     authorInitial: "S",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1561070791-36c11767b26a?w=1920&h=1080&fit=crop",
   },
   {
     id: "11",
@@ -139,6 +160,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Tomás Barbosa",
     authorInitial: "T",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1920&h=1080&fit=crop",
   },
   {
     id: "12",
@@ -150,6 +173,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Maya Johnson",
     authorInitial: "M",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1920&h=1080&fit=crop",
   },
   {
     id: "13",
@@ -161,6 +186,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Alex Petrov",
     authorInitial: "A",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1920&h=1080&fit=crop",
   },
   {
     id: "14",
@@ -172,6 +199,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Nina Volkov",
     authorInitial: "N",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=1920&h=1080&fit=crop",
   },
   {
     id: "15",
@@ -183,6 +212,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Daniel Ortiz",
     authorInitial: "D",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1920&h=1080&fit=crop",
   },
   {
     id: "16",
@@ -194,6 +225,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Raquel Ferreira",
     authorInitial: "R",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1920&h=1080&fit=crop",
   },
   {
     id: "17",
@@ -205,6 +238,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Kevin Zhao",
     authorInitial: "K",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&h=1080&fit=crop",
   },
   {
     id: "18",
@@ -216,6 +251,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Isabela Nunes",
     authorInitial: "I",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1581291518633-83b4eef1d2fa?w=1920&h=1080&fit=crop",
   },
   {
     id: "19",
@@ -227,6 +264,8 @@ export const mockCourses: CourseType[] = [
     authorName: "Fernando Lima",
     authorInitial: "F",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1920&h=1080&fit=crop",
   },
   {
     id: "20",
@@ -238,5 +277,7 @@ export const mockCourses: CourseType[] = [
     authorName: "Camila Rocha",
     authorInitial: "C",
     thumbnailGradient: THUMBNAIL_GRADIENT,
+    thumbnailUrl:
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1920&h=1080&fit=crop",
   },
 ];

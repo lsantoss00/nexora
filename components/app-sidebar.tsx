@@ -181,7 +181,7 @@ const mainItems = [
     title: "Certificados",
     url: "/certificados",
     icon: FileBadge,
-    disabled: true,
+    disabled: false,
     subItems: [],
   },
   {

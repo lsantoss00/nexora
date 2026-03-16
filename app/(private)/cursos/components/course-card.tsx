@@ -1,9 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Badge from "@/components/core/badge";
 import Column from "@/components/core/column";
 import Progress from "@/components/core/progress";
 import Row from "@/components/core/row";
 import { cn } from "@/utils/cn";
 import { Clock, Play } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import type { CourseType } from "../data/mock-courses";
@@ -20,17 +24,28 @@ const formatDuration = (minutes: number) => {
 };
 
 const CourseCard = ({ course, className }: CourseCardProps) => {
+  const [imgError, setImgError] = useState(false);
   const isInProgress = course.progress !== undefined && course.progress > 0;
 
   return (
     <Link href={`/cursos/${course.id}`} className={cn("group", className)}>
       <Column className="h-full overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-shadow group-hover:shadow-md">
-        <div
-          className={cn(
-            "aspect-video w-full bg-linear-to-br",
-            course.thumbnailGradient,
+        <div className="relative aspect-video w-full overflow-hidden">
+          {course.thumbnailUrl && !imgError ? (
+            <div className="h-full w-full transition-transform duration-300 group-hover:scale-110">
+              <Image
+                src={course.thumbnailUrl}
+                alt={course.title}
+                fill
+                className="object-cover"
+                onError={() => setImgError(true)}
+              />
+              <div className="absolute inset-0 bg-black/50" />
+            </div>
+          ) : (
+            <div className="h-full w-full bg-zinc-800" />
           )}
-        />
+        </div>
 
         <Column className="gap-3 p-4">
           <Row className="items-center gap-2">
