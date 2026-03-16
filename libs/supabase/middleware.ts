@@ -1,7 +1,11 @@
 import { createServer } from "@/libs/supabase/server";
 import { NextResponse, type NextRequest } from "next/server";
 
-const PRIVATE_ROUTES = ["/perfil"];
+const PRIVATE_ROUTES = [
+  "/cursos/todos-os-cursos",
+  "/cursos/cursos-em-andamento",
+  "/perfil",
+];
 
 export async function updateSession(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
@@ -29,22 +33,21 @@ export async function updateSession(request: NextRequest) {
     });
   }
 
+  if (pathname === "/") {
+    if (!user) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/entrar";
+      return NextResponse.redirect(url);
+    }
+    return supabaseResponse;
+  }
+
   if (isPrivateRoute) {
     if (!user) {
       const url = request.nextUrl.clone();
       url.pathname = "/entrar";
       return NextResponse.redirect(url);
     }
-  }
-
-  if (pathname === "/") {
-    const url = request.nextUrl.clone();
-    if (user) {
-      url.pathname = "/usuarios";
-    } else {
-      url.pathname = "/entrar";
-    }
-    return NextResponse.redirect(url);
   }
 
   if (
@@ -60,7 +63,7 @@ export async function updateSession(request: NextRequest) {
 
   if (user && pathname === "/entrar") {
     const url = request.nextUrl.clone();
-    url.pathname = "/usuarios";
+    url.pathname = "/";
     url.search = "";
     return NextResponse.redirect(url);
   }
@@ -68,7 +71,7 @@ export async function updateSession(request: NextRequest) {
   if (user && pathname === "/redefinir-senha") {
     if (hasErrorParam) return supabaseResponse;
     const url = request.nextUrl.clone();
-    url.pathname = "/usuarios";
+    url.pathname = "/";
     url.search = "";
     return NextResponse.redirect(url);
   }

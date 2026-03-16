@@ -27,5 +27,7 @@ export async function signUp({ name, email, password }: SignUpProps) {
       error: { code: error.code, message: error.message },
     };
 
+  await supabase.auth.signOut();
+
   return { success: true };
 }

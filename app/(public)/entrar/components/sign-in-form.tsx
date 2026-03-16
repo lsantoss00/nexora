@@ -46,13 +46,11 @@ const SignInForm = () => {
     mutationFn: signIn,
     onSuccess: (result) => {
       if (result?.success) {
-        router.push("/perfil");
+        router.push("/");
       }
 
       if (result?.error) {
-        toast.error(supabaseErrorsTranslator(result.error), {
-          className: "!bg-red-700 !text-white",
-        });
+        toast.error(supabaseErrorsTranslator(result.error));
       }
     },
   });

@@ -48,9 +48,7 @@ const RecoveryPasswordForm = () => {
         if (result.success) {
           toast.success("E-mail enviado com sucesso!");
         } else {
-          toast.error(supabaseErrorsTranslator(result.error), {
-            className: "!bg-red-700 !text-white",
-          });
+          toast.error(supabaseErrorsTranslator(result.error));
         }
       },
     });

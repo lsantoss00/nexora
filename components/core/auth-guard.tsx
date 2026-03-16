@@ -13,9 +13,7 @@ export function AuthGuard({ children }: AuthGuardProps) {
 
   if (isLoadingAuth)
     return (
-      <div className="m-auto relative">
-        <Loader2 className="text-primary animate-spin w-12 h-12" />
-      </div>
+      <Loader2 className="text-primary animate-spin w-12 h-12 m-auto min-h-screen" />
     );
 
   return <>{children}</>;
