@@ -36,26 +36,6 @@ export default async function LessonPage({ params }: PageProps) {
   const { lesson, module } = result;
 
   const modules = getModulesByCourseId(id);
-  const allLessons = modules.flatMap((m) =>
-    m.lessons.map((l) => ({ ...l, moduleId: m.id })),
-  );
-  const currentIndex = allLessons.findIndex((l) => l.id === lessonId);
-
-  const prevLesson =
-    currentIndex > 0
-      ? {
-          id: allLessons[currentIndex - 1].id,
-          title: allLessons[currentIndex - 1].title,
-        }
-      : null;
-
-  const nextLesson =
-    currentIndex < allLessons.length - 1
-      ? {
-          id: allLessons[currentIndex + 1].id,
-          title: allLessons[currentIndex + 1].title,
-        }
-      : null;
 
   return (
     <Column className="w-full gap-8 px-4 py-8 xl:px-8">
@@ -75,10 +55,8 @@ export default async function LessonPage({ params }: PageProps) {
         <div className="lg:sticky lg:top-8 lg:self-start">
           <LessonModuleNav
             courseId={id}
-            module={module}
+            modules={modules}
             currentLessonId={lessonId}
-            prevLesson={prevLesson}
-            nextLesson={nextLesson}
           />
         </div>
       </div>
