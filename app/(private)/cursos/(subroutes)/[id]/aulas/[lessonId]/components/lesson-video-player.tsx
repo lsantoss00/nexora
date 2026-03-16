@@ -1,8 +1,8 @@
 "use client";
 
 import Column from "@/components/core/column";
-import { PlayCircle } from "lucide-react";
 import Vimeo from "@u-wave/react-vimeo";
+import { PlayCircle } from "lucide-react";
 
 type LessonVideoPlayerProps = {
   vimeoVideoId?: string;
