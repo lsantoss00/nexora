@@ -38,7 +38,7 @@ export default async function LessonPage({ params }: PageProps) {
   const modules = getModulesByCourseId(id);
 
   return (
-    <Column className="w-full gap-8 px-4 py-8 xl:px-8">
+    <Column className="w-full gap-8 px-4 pt-8 pb-4 xl:px-8">
       <LessonHeader
         courseId={id}
         courseTitle={course.title}
@@ -52,7 +52,7 @@ export default async function LessonPage({ params }: PageProps) {
           <LessonInfo lesson={lesson} />
         </Column>
 
-        <div className="lg:sticky lg:top-8 lg:self-start">
+        <div className="lg:sticky lg:top-18 lg:self-start">
           <LessonModuleNav
             courseId={id}
             modules={modules}

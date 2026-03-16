@@ -23,7 +23,7 @@ const LessonModuleNav = ({
 }: LessonModuleNavProps) => {
   return (
     <Column className="gap-4">
-      <Column className="max-h-[70vh] gap-4 overflow-y-auto pr-1">
+      <Column className="max-h-[calc(100vh-6rem)] gap-4 overflow-y-auto pr-1">
         {modules.map((module) => (
           <Column key={module.id}>
             <Row className="items-center gap-3 px-1 pb-2">
