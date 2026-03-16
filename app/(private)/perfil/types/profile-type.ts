@@ -1,6 +1,6 @@
 export type ProfileType = {
   id: string;
-  username: string;
+  name: string;
   email: string;
   profilePictureUrl: string;
   createdAt: string;

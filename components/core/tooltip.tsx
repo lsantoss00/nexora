@@ -56,11 +56,4 @@ const TooltipContent = ({
   );
 };
 
-const TooltipComponents = {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-};
-
-export default TooltipComponents;
+export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger };

@@ -23,7 +23,7 @@ const SignOutButton = () => {
     <Button
       type="button"
       variant="link"
-      className="text-red-800 hover:text-red-500 w-fit px-1!"
+      className="text-red-600 hover:text-red-500 w-fit px-1!"
       onClick={() => doSignOut()}
       disabled={pendingDoSignOut}
     >

@@ -70,9 +70,7 @@ const CreateAccountForm = () => {
       }
 
       if (result?.error) {
-        toast.error(supabaseErrorsTranslator(result.error), {
-          className: "!bg-red-700 !text-white",
-        });
+        toast.error(supabaseErrorsTranslator(result.error));
       }
     },
   });
