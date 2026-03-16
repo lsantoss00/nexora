@@ -102,7 +102,7 @@ const CreateAccountForm = () => {
           {...register("name")}
         />
         {errors.name && (
-          <span className="text-xs text-red-800 font-medium">
+          <span className="text-xs text-destructive font-medium">
             {errors.name.message}
           </span>
         )}
@@ -121,7 +121,7 @@ const CreateAccountForm = () => {
           {...register("email")}
         />
         {errors.email && (
-          <span className="text-xs text-red-800 font-medium">
+          <span className="text-xs text-destructive font-medium">
             {errors.email.message}
           </span>
         )}
@@ -140,7 +140,7 @@ const CreateAccountForm = () => {
           {...register("password")}
         />
         {errors.password && (
-          <span className="text-xs text-red-800 font-medium">
+          <span className="text-xs text-destructive font-medium">
             {errors.password.message}
           </span>
         )}
@@ -159,7 +159,7 @@ const CreateAccountForm = () => {
           {...register("confirmPassword")}
         />
         {errors.confirmPassword && (
-          <span className="text-xs text-red-800 font-medium">
+          <span className="text-xs text-destructive font-medium">
             {errors.confirmPassword.message}
           </span>
         )}
@@ -196,7 +196,7 @@ const CreateAccountForm = () => {
                 </Label>
               </Row>
               {errors.acceptTerms && (
-                <span className="text-xs text-red-800 font-medium">
+                <span className="text-xs text-destructive font-medium">
                   {errors.acceptTerms.message}
                 </span>
               )}

@@ -88,7 +88,7 @@ const RecoveryPasswordForm = () => {
           {...register("email")}
         />
         {errors.email && (
-          <span className="text-xs text-red-800 font-medium">
+          <span className="text-xs text-destructive font-medium">
             {errors.email.message}
           </span>
         )}

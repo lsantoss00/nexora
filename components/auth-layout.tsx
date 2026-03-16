@@ -15,7 +15,7 @@ const LogoArea = ({ className }: { className?: string }) => {
         `z-10 items-center w-full max-w-md flex-row lg:flex-col mb-8 gap-4 ${className}`,
       )}
     >
-      <Flex className="w-10 h-10 lg:w-12 lg:h-12 items-center justify-center rounded-md bg-primary">
+      <Flex className="w-10 h-10 lg:w-12 lg:h-12 items-center justify-center rounded-lg bg-primary">
         <span className="text-secondary font-display font-bold text-xl lg:text-2xl">
           N
         </span>
@@ -34,10 +34,10 @@ const LogoArea = ({ className }: { className?: string }) => {
 const AuthLayout = ({ children, title, subtitle }: AuthLayoutProps) => {
   return (
     <Flex className="min-h-screen w-full">
-      <div className="hidden lg:flex lg:w-1/2 bg-zinc-900 relative overflow-hidden items-center justify-center p-12">
+      <div className="hidden lg:flex lg:w-1/2 bg-card relative overflow-hidden items-center justify-center p-12">
         <LogoArea />
       </div>
-      <Column className="w-full lg:w-1/2 items-center justify-center p-6 sm:p-12 bg-white">
+      <Column className="w-full lg:w-1/2 items-center justify-center p-6 sm:p-12 bg-background">
         <LogoArea className="lg:hidden" />
         <div className="w-full max-w-md">
           <h1 className="font-display text-3xl font-bold text-foreground mb-2">

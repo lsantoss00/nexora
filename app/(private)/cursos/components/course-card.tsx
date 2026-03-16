@@ -43,7 +43,7 @@ const CourseCard = ({ course, className }: CourseCardProps) => {
               <div className="absolute inset-0 bg-black/50" />
             </div>
           ) : (
-            <div className="h-full w-full bg-zinc-800" />
+            <div className="h-full w-full bg-muted" />
           )}
         </div>
 

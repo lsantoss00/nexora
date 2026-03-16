@@ -134,7 +134,7 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="items-center mb-2 space-y-4">
-        <Row className="w-full items-center justify-center gap-2 hover:bg-muted transition-colors p-2 rounded-md h-12">
+        <Row className="w-full items-center justify-center gap-2 hover:bg-muted transition-colors p-2 rounded-lg h-12">
           <Column className="min-w-0 flex-1">
             {isLoadingAuth ? (
               <Column className="space-y-1">

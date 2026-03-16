@@ -21,7 +21,7 @@ const InProgressCertificateCard = ({
   const hasImage = certificate.courseImageUrl && !imgError;
 
   return (
-    <Column className="relative overflow-hidden rounded-xl p-6">
+    <Column className="relative overflow-hidden border rounded-xl p-6">
       {hasImage ? (
         <>
           <Image
@@ -34,7 +34,7 @@ const InProgressCertificateCard = ({
           <div className="absolute inset-0 bg-black/80" />
         </>
       ) : (
-        <div className="absolute inset-0 bg-zinc-900" />
+        <div className="absolute inset-0 bg-card" />
       )}
       <Column className="relative z-10 items-center gap-3">
         <div className="flex size-14 items-center justify-center rounded-full bg-amber-500/10">

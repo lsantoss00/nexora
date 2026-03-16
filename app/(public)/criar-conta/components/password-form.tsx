@@ -92,7 +92,7 @@ const PasswordForm = () => {
           {...register("password")}
         />
         {errors.password && (
-          <span className="text-xs text-red-800 font-medium">
+          <span className="text-xs text-destructive font-medium">
             {errors.password.message}
           </span>
         )}
@@ -111,7 +111,7 @@ const PasswordForm = () => {
           {...register("confirmPassword")}
         />
         {errors.confirmPassword && (
-          <span className="text-xs text-red-800 font-medium">
+          <span className="text-xs text-destructive font-medium">
             {errors.confirmPassword.message}
           </span>
         )}

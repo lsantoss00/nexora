@@ -39,7 +39,7 @@ const CompletedCertificateCard = ({
 
   return (
     <>
-      <Column className="overflow-hidden rounded-xl">
+      <Column className="overflow-hidden rounded-xl border">
         <div className="relative p-6">
           {hasImage ? (
             <>
@@ -53,10 +53,8 @@ const CompletedCertificateCard = ({
               <div className="absolute inset-0 bg-black/70" />
             </>
           ) : (
-            <div className="absolute inset-0 bg-zinc-900" />
+            <div className="absolute inset-0 bg-card" />
           )}
-          <div className="absolute top-0 left-0 z-10 h-6 w-6 rounded-tl-xl border-t-2 border-l-2 border-primary/30" />
-          <div className="absolute top-0 right-0 z-10 h-6 w-6 rounded-tr-xl border-t-2 border-r-2 border-primary/30" />
           <Column className="relative z-10 items-center gap-3">
             <div className="flex size-14 items-center justify-center rounded-full bg-amber-500/15">
               <Award className="size-8 text-amber-500" />
@@ -71,7 +69,7 @@ const CompletedCertificateCard = ({
             </Column>
           </Column>
         </div>
-        <Row className="items-center justify-between bg-zinc-900 px-6 py-4">
+        <Row className="items-center justify-between bg-card px-6 py-4">
           <span className="text-xs text-zinc-400">ID: {certificate.id}</span>
           <Row className="items-center gap-3">
             <button

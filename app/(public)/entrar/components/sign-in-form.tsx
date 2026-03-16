@@ -7,13 +7,13 @@ import Input from "@/components/core/input";
 import Label from "@/components/core/label";
 import Row from "@/components/core/row";
 import { supabaseErrorsTranslator } from "@/utils/supabase-errors-translator";
+import { toast } from "@/utils/toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { Loader2Icon } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import { toast } from "sonner";
 import { z } from "zod";
 
 const signInFormSchema = z.object({
@@ -78,7 +78,7 @@ const SignInForm = () => {
           {...register("email")}
         />
         {errors.email && (
-          <span className="text-xs text-red-800 font-medium">
+          <span className="text-xs text-destructive font-medium">
             {errors.email.message}
           </span>
         )}
@@ -105,7 +105,7 @@ const SignInForm = () => {
           {...register("password")}
         />
         {errors.password && (
-          <span className="text-xs text-red-800 font-medium">
+          <span className="text-xs text-destructive font-medium">
             {errors.password.message}
           </span>
         )}

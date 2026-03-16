@@ -41,7 +41,7 @@ const CourseHero = ({ course, totalLessons }: CourseHeroProps) => {
             <div className="absolute inset-0 bg-black/50" />
           </>
         ) : (
-          <div className="absolute inset-0 bg-zinc-800" />
+          <div className="absolute inset-0 bg-muted" />
         )}
       </div>
 
