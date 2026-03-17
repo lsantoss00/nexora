@@ -45,9 +45,7 @@ const InProgressCertificateCard = ({
             {certificate.courseTitle}
           </h3>
           <p className="text-center text-sm text-zinc-500">
-            Complete mais{" "}
-            <span className="text-lg font-bold text-primary">{remaining}%</span>{" "}
-            para desbloquear este certificado.
+            Complete mais {remaining}% para desbloquear este certificado.
           </p>
         </Column>
         <Row className="w-full items-center gap-2 mt-2">
