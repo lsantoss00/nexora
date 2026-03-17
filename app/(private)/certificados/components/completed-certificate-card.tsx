@@ -56,8 +56,8 @@ const CompletedCertificateCard = ({
             <div className="absolute inset-0 bg-card" />
           )}
           <Column className="relative z-10 items-center gap-3">
-            <div className="flex size-14 items-center justify-center rounded-full bg-amber-500/15">
-              <Award className="size-8 text-amber-500" />
+            <div className="flex size-14 items-center justify-center rounded-full bg-blue-500/20">
+              <Award className="size-8 text-blue-500" />
             </div>
             <Column className="items-center gap-1">
               <h3 className="text-center font-semibold text-white">

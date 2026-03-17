@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className="antialiased">
         <TanstackQueryProvider>
           <NextTopLoader
-            color="#dc7702"
+            color="#2b7fff"
             height={3}
             showSpinner={false}
             crawl={false}
