@@ -7,7 +7,7 @@ import { Menu as MenuIcon } from "lucide-react";
 
 export function AppHeader() {
   return (
-    <header className="sticky bg-background top-0 z-50 border-b h-20 flex items-center justify-between w-full px-4 xl:px-8">
+    <header className="sticky bg-background top-0 z-50 border-b min-h-18 flex items-center justify-between w-full px-4 xl:px-8">
       <Row className="w-full items-center justify-between  gap-4">
         <Input
           isSearchInput

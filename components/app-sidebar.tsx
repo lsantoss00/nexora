@@ -35,9 +35,7 @@ export function AppSidebar() {
       <SidebarContent className="flex overflow-hidden">
         <SidebarGroup className="flex items-center">
           <SidebarHeader className="p-0! h-16 items-center justify-center">
-            <h1 className="w-full h-auto max-w-50 mb-2 shrink-0">
-              Nexora
-            </h1>
+            <h1 className="w-full h-auto max-w-50 mb-2 shrink-0">Nexora</h1>
           </SidebarHeader>
           <SidebarGroupContent className="mt-5">
             <SidebarMenu aria-label="Menu principal">
@@ -60,15 +58,13 @@ export function AppSidebar() {
                             <SidebarMenuButton
                               isActive={isActive}
                               disabled={item.disabled}
-                              className="flex relative text-muted-foreground cursor-pointer"
+                              className="flex relative text-white cursor-pointer"
                             >
                               <item.icon
                                 className="w-5! h-5!"
                                 aria-hidden="true"
                               />
-                              <span className="font-medium">
-                                {item.title}
-                              </span>
+                              <span className="font-medium">{item.title}</span>
                               <ChevronDown className="ml-auto transition-transform group-data-[state=open]/menu-item:rotate-180" />
                             </SidebarMenuButton>
                           </CollapsiblePrimitive.Trigger>
@@ -99,7 +95,7 @@ export function AppSidebar() {
                           asChild={!item.disabled}
                           isActive={isActive}
                           disabled={item.disabled}
-                          className="flex relative text-muted-foreground"
+                          className="flex relative text-white"
                           aria-current={isActive ? "page" : undefined}
                         >
                           {item.disabled ? (
@@ -108,9 +104,7 @@ export function AppSidebar() {
                                 className="w-5! h-5!"
                                 aria-hidden="true"
                               />
-                              <span className="font-medium">
-                                {item.title}
-                              </span>
+                              <span className="font-medium">{item.title}</span>
                             </>
                           ) : (
                             <Link href={item.url}>
@@ -118,9 +112,7 @@ export function AppSidebar() {
                                 className="w-5! h-5!"
                                 aria-hidden="true"
                               />
-                              <span className="font-medium">
-                                {item.title}
-                              </span>
+                              <span className="font-medium">{item.title}</span>
                             </Link>
                           )}
                         </SidebarMenuButton>
