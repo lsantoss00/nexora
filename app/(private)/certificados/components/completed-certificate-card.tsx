@@ -61,17 +61,29 @@ const CompletedCertificateCard = ({
               <Award className="size-8 text-primary" />
             </div>
             <Column className="items-center gap-1">
-              <h3 className={cn("text-center font-semibold", hasImage ? "text-white" : "text-foreground")}>
+              <h3
+                className={cn(
+                  "text-center font-semibold",
+                  hasImage ? "text-white" : "text-foreground",
+                )}
+              >
                 {certificate.courseTitle}
               </h3>
-              <p className={cn("text-sm", hasImage ? "text-white/70" : "text-muted-foreground")}>
+              <p
+                className={cn(
+                  "text-sm",
+                  hasImage ? "text-white/70" : "text-muted-foreground",
+                )}
+              >
                 Concluído em {certificate.completedAt}
               </p>
             </Column>
           </Column>
         </div>
         <Row className="items-center justify-between bg-card px-6 py-4">
-          <span className="text-xs text-muted-foreground">ID: {certificate.id}</span>
+          <span className="text-xs text-muted-foreground">
+            ID: {certificate.id}
+          </span>
           <Row className="items-center gap-3">
             <button
               onClick={() => setViewOpen(true)}

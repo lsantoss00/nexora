@@ -7,6 +7,7 @@ import { Award } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
+import { cn } from "@/utils/cn";
 import type { InProgressCertificateType } from "../types/certificate-types";
 
 type InProgressCertificateCardProps = {
@@ -41,10 +42,20 @@ const InProgressCertificateCard = ({
           <Award className="size-8 text-primary/50" />
         </div>
         <Column className="items-center gap-1">
-          <h3 className="text-center font-semibold text-foreground">
+          <h3
+            className={cn(
+              "text-center font-semibold",
+              hasImage ? "text-white" : "text-foreground",
+            )}
+          >
             {certificate.courseTitle}
           </h3>
-          <p className="text-center text-sm text-muted-foreground">
+          <p
+            className={cn(
+              "text-sm",
+              hasImage ? "text-white/70" : "text-muted-foreground",
+            )}
+          >
             Complete mais {remaining}% para desbloquear este certificado.
           </p>
         </Column>
