@@ -19,7 +19,7 @@ const LessonVideoPlayer = ({ vimeoVideoId }: LessonVideoPlayerProps) => {
         <Vimeo video={videoId} responsive className="absolute inset-0" />
       ) : (
         <div className="absolute inset-0 flex items-center justify-center">
-          <Column className="items-center gap-2 text-zinc-400">
+          <Column className="items-center gap-2 text-muted-foreground">
             <PlayCircle className="size-16" />
             <span className="text-sm">Video em breve</span>
           </Column>

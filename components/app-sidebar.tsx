@@ -35,7 +35,7 @@ export function AppSidebar() {
       <SidebarContent className="flex overflow-hidden">
         <SidebarGroup className="flex items-center">
           <SidebarHeader className="p-0! h-16 items-center justify-center">
-            <h1 className="w-full h-auto max-w-50 mb-2 shrink-0">Nexora</h1>
+            <h1 className="w-full h-auto max-w-50 mb-2 shrink-0">Aprimora+</h1>
           </SidebarHeader>
           <SidebarGroupContent className="mt-5">
             <SidebarMenu aria-label="Menu principal">

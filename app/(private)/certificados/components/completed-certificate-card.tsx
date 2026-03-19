@@ -56,39 +56,39 @@ const CompletedCertificateCard = ({
             <div className="absolute inset-0 bg-card" />
           )}
           <Column className="relative z-10 items-center gap-3">
-            <div className="flex size-14 items-center justify-center rounded-full bg-blue-500/20">
-              <Award className="size-8 text-blue-500" />
+            <div className="flex size-14 items-center justify-center rounded-full bg-primary/20">
+              <Award className="size-8 text-primary" />
             </div>
             <Column className="items-center gap-1">
               <h3 className="text-center font-semibold text-white">
                 {certificate.courseTitle}
               </h3>
-              <p className="text-sm text-zinc-300">
+              <p className="text-sm text-muted-foreground">
                 Concluído em {certificate.completedAt}
               </p>
             </Column>
           </Column>
         </div>
         <Row className="items-center justify-between bg-card px-6 py-4">
-          <span className="text-xs text-zinc-400">ID: {certificate.id}</span>
+          <span className="text-xs text-muted-foreground">ID: {certificate.id}</span>
           <Row className="items-center gap-3">
             <button
               onClick={() => setViewOpen(true)}
-              className="cursor-pointer text-zinc-400 transition-colors hover:text-primary"
+              className="cursor-pointer text-muted-foreground transition-colors hover:text-primary"
               title="Visualizar"
             >
               <Eye className="size-4" />
             </button>
             <button
               onClick={handleDownload}
-              className="cursor-pointer text-zinc-400 transition-colors hover:text-primary"
+              className="cursor-pointer text-muted-foreground transition-colors hover:text-primary"
               title="Download"
             >
               <Download className="size-4" />
             </button>
             <button
               onClick={handleMail}
-              className="cursor-pointer text-zinc-400 transition-colors hover:text-primary"
+              className="cursor-pointer text-muted-foreground transition-colors hover:text-primary"
               title="Enviar por e-mail"
             >
               <Mail className="size-4" />

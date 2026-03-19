@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Nexora",
+  title: "Aprimora+",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className="antialiased">
         <TanstackQueryProvider>
           <NextTopLoader
-            color="#2b7fff"
+            color="#0094c8"
             height={3}
             showSpinner={false}
             crawl={false}

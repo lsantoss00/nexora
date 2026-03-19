@@ -10,7 +10,7 @@ export default function CreateNewPasswordPage() {
   return (
     <AuthLayout
       title="Criar Senha"
-      subtitle="Defina uma nova senha para sua conta Nexora"
+      subtitle="Defina uma nova senha para sua conta Aprimora+"
     >
       <PasswordForm />
     </AuthLayout>

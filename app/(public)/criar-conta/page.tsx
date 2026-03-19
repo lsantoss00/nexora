@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function CreateAccount() {
   return (
-    <AuthLayout title="Criar Conta" subtitle="Crie sua conta Nexora">
+    <AuthLayout title="Criar Conta" subtitle="Crie sua conta Aprimora+">
       <CreateAccountForm />
     </AuthLayout>
   );
