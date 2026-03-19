@@ -7,6 +7,7 @@ import { Award, Download, Eye, Mail } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
+import { cn } from "@/utils/cn";
 import { toast } from "@/utils/toast";
 import type { CompletedCertificateType } from "../types/certificate-types";
 
@@ -60,10 +61,10 @@ const CompletedCertificateCard = ({
               <Award className="size-8 text-primary" />
             </div>
             <Column className="items-center gap-1">
-              <h3 className="text-center font-semibold text-white">
+              <h3 className={cn("text-center font-semibold", hasImage ? "text-white" : "text-foreground")}>
                 {certificate.courseTitle}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className={cn("text-sm", hasImage ? "text-white/70" : "text-muted-foreground")}>
                 Concluído em {certificate.completedAt}
               </p>
             </Column>

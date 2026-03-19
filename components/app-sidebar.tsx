@@ -5,10 +5,15 @@ import Column from "@/components/core/column";
 import Row from "@/components/core/row";
 import { Skeleton } from "@/components/core/skeleton";
 import { useAuth } from "@/providers/auth-provider";
+import darkLogo from "@/public/images/logo-aprimora+.avif";
+import whiteLogo from "@/public/images/white-logo-aprimora+.avif";
 import { ChevronDown, FileBadge, Headset, Home, Monitor } from "lucide-react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Collapsible as CollapsiblePrimitive } from "radix-ui";
+import { useSyncExternalStore } from "react";
 import {
   Sidebar,
   SidebarContent,
@@ -27,7 +32,16 @@ import {
 export function AppSidebar() {
   const { profile, isLoadingAuth } = useAuth();
   const pathname = usePathname();
+  const { resolvedTheme } = useTheme();
 
+  // prevent missmatch logo (hydratation)
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+
+  const logoSrc = mounted && resolvedTheme === "light" ? darkLogo : whiteLogo;
   const firstName = profile?.name?.split(" ")[0] || "";
 
   return (
@@ -35,7 +49,13 @@ export function AppSidebar() {
       <SidebarContent className="flex overflow-hidden">
         <SidebarGroup className="flex items-center">
           <SidebarHeader className="p-0! h-16 items-center justify-center">
-            <h1 className="w-full h-auto max-w-50 mb-2 shrink-0">Aprimora+</h1>
+            <Image
+              src={logoSrc}
+              alt="Aprimora+"
+              priority
+              unoptimized
+              className="w-full h-full max-h-10"
+            />
           </SidebarHeader>
           <SidebarGroupContent className="mt-5">
             <SidebarMenu aria-label="Menu principal">
@@ -58,7 +78,7 @@ export function AppSidebar() {
                             <SidebarMenuButton
                               isActive={isActive}
                               disabled={item.disabled}
-                              className="flex relative text-white cursor-pointer"
+                              className="flex relative text-sidebar-foreground cursor-pointer"
                             >
                               <item.icon
                                 className="w-5! h-5!"
@@ -95,7 +115,7 @@ export function AppSidebar() {
                           asChild={!item.disabled}
                           isActive={isActive}
                           disabled={item.disabled}
-                          className="flex relative text-white"
+                          className="flex relative text-sidebar-foreground"
                           aria-current={isActive ? "page" : undefined}
                         >
                           {item.disabled ? (
@@ -126,7 +146,7 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="items-center mb-2 space-y-4">
-        <Row className="w-full items-center justify-center gap-2 hover:bg-muted transition-colors p-2 rounded-lg h-12">
+        <Row className="w-full items-center justify-center gap-2 hover:bg-sidebar-accent transition-colors p-2 rounded-lg h-12">
           <Column className="min-w-0 flex-1">
             {isLoadingAuth ? (
               <Column className="space-y-1">
